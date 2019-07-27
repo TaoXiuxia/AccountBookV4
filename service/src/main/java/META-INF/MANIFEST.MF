@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Class-Path: jconsole.jar druid-1.0.16.jar commons-codec-1.2.jar jstl-1
+ .2.jar spring-test-4.3.6.RELEASE.jar jackson-databind-2.5.2.jar jacks
+ on-jaxrs-base-2.5.2.jar spring-beans-4.3.6.RELEASE.jar spring-jdbc-4.
+ 3.6.RELEASE.jar mybatis-3.3.0.jar log4j-1.2.16.jar spring-core-4.3.6.
+ RELEASE.jar jline-0.9.94.jar jackson-dataformat-xml-2.5.2.jar stax-ap
+ i-1.0.1.jar zookeeper-3.3.3.jar slf4j-nop-1.6.4.jar stax2-api-3.1.4.j
+ ar spring-web-4.3.6.RELEASE.jar woodstox-core-asl-4.4.1.jar dom4j-1.6
+ .1.jar spring-webmvc-4.3.6.RELEASE.jar jackson-annotations-2.5.2.jar 
+ poi-ooxml-3.8.jar slf4j-api-1.6.1.jar mail-1.4.7.jar jackson-jaxrs-xm
+ l-provider-2.5.2.jar spring-aop-4.3.6.RELEASE.jar jackson-core-2.5.2.
+ jar commons-logging-1.2.jar spring-context-support-4.3.6.RELEASE.jar 
+ spring-tx-4.3.6.RELEASE.jar patchca-0.5.0.jar xml-apis-1.0.b2.jar net
+ ty-3.2.5.Final.jar commons-lang-2.6.jar mysql-connector-java-5.1.38.j
+ ar spring-oxm-4.3.6.RELEASE.jar spring-expression-4.3.6.RELEASE.jar a
+ ctivation-1.1.jar javassist-3.15.0-GA.jar stax-api-1.0-2.jar commons-
+ lang3-3.4.jar aspectjweaver-1.6.11.jar xmlbeans-2.3.0.jar poi-3.8.jar
+  poi-ooxml-schemas-3.8.jar jackson-module-jaxb-annotations-2.5.2.jar 
+ mybatis-spring-1.2.3.jar dubbo-2.5.3.jar tools.jar zkclient-0.1.jar s
+ pring-context-4.3.6.RELEASE.jar
+Main-Class: com.xiutao.BootUp
+
