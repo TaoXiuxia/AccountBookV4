@@ -1,7 +1,9 @@
-// 点击验证码图片换验证码
-function refreshCheckCodeButton(){
-	$(refreshCheckCode).find("img").attr("src", "checkCode.action?" + new Date());
-}
+$(function () {
+    // 刷新验证码
+    $("#verification").bind("click", function () {
+        $(this).hide().attr('src', '/verification.action?random=' + Math.random()).fadeIn();
+    });
+});
 
 // 登录
 // 登录不对输入做校验，只注册才校验

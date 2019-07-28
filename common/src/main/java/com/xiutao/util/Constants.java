@@ -12,7 +12,7 @@ public class Constants {
 	/**
 	 * 验证码
 	 */
-	public static final String check_code_key = "check_code";
+	public static final String check_code_key = "KAPTCHA_SESSION_KEY";
 
 	public static final String SESSION_USER_KEY = "session_user_key";
 	

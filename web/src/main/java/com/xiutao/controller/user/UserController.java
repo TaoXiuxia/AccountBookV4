@@ -237,31 +237,6 @@ public class UserController {
 	}
 
 	/**
-	 * 生成图片验证码
-	 * 
-	 * @param request
-	 * @param response
-	 * @param session
-	 * @throws IOException
-	 */
-	@RequestMapping(value = "checkCode.action")
-	public void checkCode(HttpServletRequest request, HttpServletResponse response, HttpSession session)
-			throws IOException {
-		//ConfigurableCaptchaService cs = new ConfigurableCaptchaService();
-		//cs.setColorFactory(new SingleColorFactory(new Color(20, 60, 170)));
-		//cs.setFilterFactory(new CurvesRippleFilterFactory(cs.getColorFactory()));
-
-		//response.setHeader("Pragma", "no-cache");
-		//response.setHeader("Cache-Control", "no-cache");
-		//response.setDateHeader("Expires", 0);
-		//response.setContentType("image/jpeg");
-
-		//String code = EncoderHelper.getChallangeAndWriteImage(cs, "png", response.getOutputStream());
-		//session.setAttribute(Constants.check_code_key, code);
-		session.setAttribute(Constants.check_code_key, "1");
-	}
-	
-	/**
 	 * 向item表中插入初始的item
 	 * @param userId
 	 */
@@ -320,7 +295,7 @@ public class UserController {
 	public void setItemService(ItemService itemService) {
 		this.itemService = itemService;
 	}
-	
+
 }
 
 

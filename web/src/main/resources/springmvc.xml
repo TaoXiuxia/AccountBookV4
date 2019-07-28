@@ -23,6 +23,7 @@
     <context:component-scan base-package="com.xiutao.serviceapi" />
 
     <import resource="classpath:/dubbo_consumer.xml" />
+    <import resource="classpath:/spring-context-kaptcha.xml" />
 
     <!-- 启用spring mvc 注解 -->
     <context:annotation-config />

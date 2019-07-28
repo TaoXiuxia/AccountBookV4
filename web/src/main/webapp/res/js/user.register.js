@@ -1,8 +1,3 @@
-// 点击验证码图片换验证码
-function refreshCheckCodeButton(){
-	$(refreshCheckCode).find("img").attr("src", "checkCode.action?" + new Date());
-}
-
 // 注册
 function register() {
 	if(!validator()){
@@ -53,7 +48,7 @@ function register() {
 	});
 }
 
-// 按 enter 键提交
+// 按enter键提交
 $(document).keyup(function(event) {
 	var code = event.keyCode;
 	if (code == 13) {
