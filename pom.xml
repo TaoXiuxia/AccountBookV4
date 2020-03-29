@@ -13,7 +13,7 @@
         <module>service</module>
         <module>web</module>
         <module>common</module>
-    </modules>
+    </modules> 
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
