@@ -9,14 +9,14 @@
     <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
     <dubbo:application name="dubbo_consumer"/>
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
-    <dubbo:registry protocol="zookeeper" address="zookeeper://192.168.197.128:2181"/>
+    <dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181"/>
     <!-- 生成远程服务代理，可以和本地bean一样使用 -->
 
-    <dubbo:reference interface="com.xiutao.serviceapi.user.UserService" id="userServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.statistic.MonthlyStatisticsService" id="statisticsServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.paymethod.PayMethodService" id="payMethodServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.item.ItemService" id="itemServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.history.HistoryService" id="historyServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.expenditure.ExpenditureService" id="expenditureServiceApi"/>
-    <dubbo:reference interface="com.xiutao.serviceapi.income.IncomeService" id="incomeServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.user.UserService" id="userServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.statistic.MonthlyStatisticsService" id="statisticsServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.paymethod.PayMethodService" id="payMethodServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.item.ItemService" id="itemServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.history.HistoryService" id="historyServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.expenditure.ExpenditureService" id="expenditureServiceApi"/>
+    <dubbo:reference retries="0" interface="com.xiutao.serviceapi.income.IncomeService" id="incomeServiceApi"/>
 </beans>

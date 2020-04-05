@@ -8,6 +8,7 @@ import com.xiutao.util.NumberFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -18,7 +19,7 @@ public class HistoryServiceImpl implements HistoryService {
 
 	
 	/**
-	 * 根据条件查询全部的收入和支出
+	 * 根据条件查询全部的收入和支出(历史页面)
 	 */
 	@Override
 	public List<Map> loadIncomesAndExpenditure(int userId,String inOrEx, int year, int month, String keyword, String sortBy, int curPage, int totalPages)  {
@@ -56,6 +57,12 @@ public class HistoryServiceImpl implements HistoryService {
 		map.put("beginRecord", (curPage - 1) * limit < 0 ? 0 : (curPage - 1)*limit);
 		map.put("limit", limit);
 		List<Map>list = incomeMapper.selectIncomesAndExpenditure(map);
+
+		// 把数据库里取出来的float转成BigDecimal，重新放回list
+		for(Map maptemp: list){
+			BigDecimal money = new BigDecimal( maptemp.get("money").toString());
+			maptemp.put("money", money.toString());
+		}
 		return list;
 	}
 	
@@ -152,7 +159,14 @@ public class HistoryServiceImpl implements HistoryService {
 		}
 		return retList;
 	}
-	
+
+	/**
+	 * 用于图表展示页面
+	 * @param userId
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 */
 	@Override
 	public List<Map> selectIncomeGroupByItemName(int userId, String startTime, String endTime) {
 		Map<String, String>paraMap = new HashMap<String, String>();
@@ -163,6 +177,13 @@ public class HistoryServiceImpl implements HistoryService {
 		return list;
 	}
 
+	/**
+	 * 用于图表展示页面
+	 * @param userId
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 */
 	@Override
 	public List<Map> selectExpenditureGroupByItemName(int userId, String startTime, String endTime) {
 		Map<String, String>paraMap = new HashMap<String, String>();
@@ -172,7 +193,14 @@ public class HistoryServiceImpl implements HistoryService {
 		List<Map> list= expenditureMapper.selectExpenditureGroupByItemName(paraMap);
 		return list;
 	}
-	
+
+	/**
+	 * 用于图表展示页面
+	 * @param userId
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 */
 	@Override
 	public List<Map> selectAllExpenditureGroupByItemName(int userId, String startTime, String endTime) {
 		Map<String, String>paraMap = new HashMap<String, String>();

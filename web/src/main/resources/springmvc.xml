@@ -29,7 +29,7 @@
     <context:annotation-config />
 
     <!-- 完成请求和注解POJO的映射 -->
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver" />
 
     <!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -50,7 +50,8 @@
         </property>
     </bean>
 
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    <!--
+    <bean class="org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver">
         <property name="messageConverters">
             <list>
                 <ref bean="stringConverter" />
@@ -58,4 +59,5 @@
             </list>
         </property>
     </bean>
+    -->
 </beans>
