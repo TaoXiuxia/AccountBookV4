@@ -1,0 +1,3 @@
+# AccountBook
+使用SpringBoot改造原AccountBook工程。
+使用Spring Security管理进行用户登录管理
