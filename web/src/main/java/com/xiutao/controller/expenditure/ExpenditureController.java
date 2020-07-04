@@ -90,7 +90,7 @@ public class ExpenditureController {
 		int userId = sessionUser.getUserId();
 		
 		// Expenditure list
-		List<Expenditure> expenditures = expenditureService.loadExpenditures(userId);
+		List<Expenditure> expenditures = expenditureService.load30DayesExpenditures(userId);
 		model.addAttribute("expenditures", expenditures);
 
 		// Expenditure项 list 
@@ -132,7 +132,7 @@ public class ExpenditureController {
 	/**
 	 * 删除Expenditures
 	 */
-	@RequestMapping("/deleExpenditsession.getAttribute(Constants.USER_ID)ure")
+	@RequestMapping("/deleExpenditure")
 	public void deleExpenditure(int expenditureId) {
 		expenditureService.deleExpenditure(expenditureId);
 	}

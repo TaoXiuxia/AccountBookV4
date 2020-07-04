@@ -88,7 +88,7 @@ public class IncomeController {
 		model.addAttribute("actualExpenditure", NumberFormat.save2Decimals(map.get("actualExpenditure")));
 		
 		// income list
-		List<Income> incomes = incomeService.loadIncomes(userId);
+		List<Income> incomes = incomeService.load30DaysIncomes(userId);
 		model.addAttribute("incomes", incomes);
 		
 		// 收入项 list

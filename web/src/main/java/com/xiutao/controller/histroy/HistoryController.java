@@ -195,7 +195,7 @@ public class HistoryController {
 	@RequestMapping("/changeHistory")
 	public void changeHistory(String itemType, String changedType, int detailsId, String changedDate,
 			float changedMoney, String changedMoneyType, int changedItem, String changedRemark, HttpSession session) {
-		int userId = Integer.valueOf((String)session.getAttribute(Constants.USER_ID));
+		int userId = (int)session.getAttribute(Constants.USER_ID);
 		
 		if (itemType.equals(changedType)) { // 同一个类目下修改
 			if (itemType.equals("in")) {

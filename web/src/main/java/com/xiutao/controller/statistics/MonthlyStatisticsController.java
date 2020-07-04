@@ -23,12 +23,12 @@ public class MonthlyStatisticsController {
 	}
 
 	/**
-	 * 增加Balance
+	 * 增加Balance 4306735960136
 	 * 
 	 */
 	@RequestMapping("/addBalance")
 	public void addBalance(float actualBalance, HttpSession session) {
-		int userId = Integer.valueOf((String)session.getAttribute(Constants.USER_ID));
+		int userId = (int)session.getAttribute(Constants.USER_ID);
 		monthlyStatisticsService.addBalance(actualBalance, userId);
 	}
 

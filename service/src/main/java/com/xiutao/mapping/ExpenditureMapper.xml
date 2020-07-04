@@ -97,6 +97,11 @@
 	<if test="dataScale != null and dataScale == 'only_this_month'.toString() ">
 		AND date_format(expenditure.date, '%Y-%m') = date_format(now(), '%Y-%m') <!-- 只查询本月数据 -->
 	</if>
+    <if test="dataScale != null and dataScale == '30days'.toString() ">
+      AND (date_format(expenditure.date, '%Y-%m') = date_format(now(), '%Y-%m')
+      or (TO_DAYS(NOW()) - TO_DAYS(expenditure.date) &lt;30)
+      )
+    </if>
 	ORDER BY
 		expenditure.date DESC, expenditure.id DESC
   </select>

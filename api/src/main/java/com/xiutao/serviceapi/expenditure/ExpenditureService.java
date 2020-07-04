@@ -9,10 +9,16 @@ import java.util.List;
 public interface ExpenditureService {
 
 	/**
-     * 加载全部支出
+     * 加载本月的全部支出
      * @return
      */
 	List<Expenditure> loadExpenditures(int userId);
+
+	/**
+	 * 加载30天内的全部支出
+	 * @return
+	 */
+	public List<Expenditure> load30DayesExpenditures(int userId);
 
 	/**
 	 * 增加Expenditure

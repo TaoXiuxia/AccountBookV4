@@ -1,9 +1,3 @@
-$(function () {
-    // 刷新验证码
-    $("#verification").bind("click", function () {
-        $(this).hide().attr('src', '/verification.action?random=' + Math.random()).fadeIn();
-    });
-});
 
 // 登录
 // 登录不对输入做校验，只注册才校验
@@ -11,7 +5,6 @@ function login()
 {
 	var account = $("#account").val();
 	var password = $("#password").val();
-	var checkCode = $("#checkCode").val();
 	var rememberMe = $("#rememberMe").is(':checked');
 	$.ajax({
 		type: "POST",
@@ -20,7 +13,6 @@ function login()
 		data: {
 			"account":account,
 			"password":password,
-			"checkCode":checkCode,
 			"rememberMe":rememberMe
 		},
 		success: function(msg){

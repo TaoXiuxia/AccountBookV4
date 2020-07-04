@@ -26,13 +26,24 @@ public class ExpenditureServiceImpl implements ExpenditureService {
 	}
 
 	/**
-	 * 加载用户的全部支出
+	 * 加载用户本月的全部支出
 	 */
 	@Override
 	public List<Expenditure> loadExpenditures(int userId) {
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put("userId", userId);
 		map.put("dataScale", Constants.ONLY_THIS_MONTH);
+		return expenditureMapper.selectAllExpenditures(map);
+	}
+
+	/**
+	 * 加载用户本月和30天内的全部支出
+	 */
+	@Override
+	public List<Expenditure> load30DayesExpenditures(int userId) {
+		HashMap<String,Object> map = new HashMap<String,Object>();
+		map.put("userId", userId);
+		map.put("dataScale", "30days");
 		return expenditureMapper.selectAllExpenditures(map);
 	}
 

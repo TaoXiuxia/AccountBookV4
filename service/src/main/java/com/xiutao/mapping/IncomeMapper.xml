@@ -146,10 +146,14 @@
 		AND income.user_id = #{userId,jdbcType=INTEGER}
 		AND income.dele = 1
 		AND income.type_of_money = pay_method.id
-	<if test="dataScale != null and dataScale == 'only_this_month'.toString() ">
+	  <if test="dataScale != null and dataScale == 'only_this_month'.toString() ">
 		AND date_format(income.date, '%Y-%m') = date_format(now(), '%Y-%m') <!-- 只查询本月数据 -->
-	</if>
-	
+	  </if>
+      <if test="dataScale != null and dataScale == '30days'.toString() ">
+          AND (date_format(income.date, '%Y-%m') = date_format(now(), '%Y-%m')
+          or (TO_DAYS(NOW()) - TO_DAYS(income.date) &lt;30)
+          )
+      </if>
 	ORDER BY
 		income.date DESC, income.id DESC
   </select>

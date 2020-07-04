@@ -49,7 +49,7 @@ public class Constants {
 	 * 只查询本月的数据
 	 */
 	public static final String ONLY_THIS_MONTH = "only_this_month";
-	
+
 	/**
 	 * 查询全部的数据，而不只是本月的
 	 */

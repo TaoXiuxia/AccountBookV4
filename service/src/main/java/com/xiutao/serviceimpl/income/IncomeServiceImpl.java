@@ -37,6 +37,18 @@ public class IncomeServiceImpl implements IncomeService {
 	}
 
 	/**
+	 * 加载用户的本月的收入
+	 */
+	@Override
+	public List<Income> load30DaysIncomes(int userId) {
+		HashMap<String,Object> map = new HashMap<String,Object>();
+		map.put("userId", userId);
+		map.put("dataScale", "30days");
+		return incomeMapper.selectAllIncomes(map);
+	}
+
+
+	/**
 	 * 添加收入income
 	 */
 	@Override

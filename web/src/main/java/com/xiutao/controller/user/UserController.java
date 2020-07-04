@@ -157,19 +157,6 @@ public class UserController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		
 		try {
-			/**
-			String sessionCheckCode = String.valueOf(session.getAttribute(Constants.check_code_key));
-			if(StringTools.isEmpty(sessionCheckCode)){
-				map.put("info", "验证码已过期，请刷新页面重试");
-				logger.info("验证码已过期，请刷新页面重试");
-				return map;
-			}
-			if (!StringTools.isEmpty(sessionCheckCode) && !sessionCheckCode.equalsIgnoreCase(checkCode)) {
-				map.put("info", "验证码错误");
-				logger.info("验证码错误");
-				return map;
-			}
-			**/
 			User user = userService.login(account, password, false); 
 			SessionUser sessionUser = new SessionUser();
 			sessionUser.setUserId(user.getId());

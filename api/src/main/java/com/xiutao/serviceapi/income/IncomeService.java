@@ -14,6 +14,11 @@ public interface IncomeService {
 	List<Income> loadIncomes(int userId);
 
 	/**
+	 * 加载30天内全部income
+	 * @return
+	*/
+	public List<Income> load30DaysIncomes(int userId);
+	/**
 	 * 增加收入
 	 * @param item
 	 * @param money
