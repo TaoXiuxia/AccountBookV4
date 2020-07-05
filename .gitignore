@@ -1,6 +1,6 @@
 .idea/
-api/target/
-common/target
-service/target
-web/target
+account-api/target/
+account-common/target
+account-service/target
+account-web/target
 *.iml

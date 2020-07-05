@@ -9,10 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version> 
     <modules>
-        <module>api</module>
-        <module>service</module>
-        <module>web</module>
-        <module>common</module>
+        <module>account-api</module>
+        <module>account-service</module>
+        <module>account-web</module>
+        <module>account-common</module>
     </modules> 
 
     <properties>
@@ -220,15 +220,6 @@
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
             <version>1.4.7</version>
-        </dependency>
-
-        <!-- maven无法自动下载patcha.jar，于是手动下载下来，本地引用 -->
-        <dependency>
-            <groupId>net.pusuo</groupId>
-            <artifactId>patchca</artifactId>
-            <version>0.5.0</version>
-            <scope>system</scope>
-            <systemPath>/home/xiaxt/.m2/repository/net/pusuo/patchca/0.5.0/patchca-0.5.0.jar</systemPath>
         </dependency>
     </dependencies>
 
