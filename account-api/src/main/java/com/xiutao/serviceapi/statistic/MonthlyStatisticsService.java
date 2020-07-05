@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.statistic;
 
 import com.xiutao.pojo.balance.Balance;
-import org.springframework.stereotype.Service;
 
 public interface MonthlyStatisticsService {
 

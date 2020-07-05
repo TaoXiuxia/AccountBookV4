@@ -14,12 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>com.xiutao</groupId>
-            <artifactId>api</artifactId>
+            <artifactId>account-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.xiutao</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>account-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

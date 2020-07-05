@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.income;
 
 import com.xiutao.pojo.income.Income;
-import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;

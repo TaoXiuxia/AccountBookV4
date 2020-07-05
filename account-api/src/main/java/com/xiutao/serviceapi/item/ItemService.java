@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.item;
 
 import com.xiutao.pojo.item.Item;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 public interface ItemService {

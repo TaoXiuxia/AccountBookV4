@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.paymethod;
 
 import com.xiutao.pojo.paymethod.PayMethod;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 public interface PayMethodService {

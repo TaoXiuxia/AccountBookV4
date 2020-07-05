@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.expenditure;
 
 import com.xiutao.pojo.expenditure.Expenditure;
-import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;

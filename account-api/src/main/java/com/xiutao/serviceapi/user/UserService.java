@@ -1,7 +1,6 @@
 package com.xiutao.serviceapi.user;
 
 import com.xiutao.pojo.user.User;
-import org.springframework.stereotype.Service;
 
 public interface UserService {
 	/**

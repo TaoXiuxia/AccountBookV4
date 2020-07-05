@@ -23,12 +23,12 @@
     <dependencies>
         <dependency>
             <groupId>com.xiutao</groupId>
-            <artifactId>api</artifactId>
+            <artifactId>account-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.xiutao</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>account-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.penggle/kaptcha -->
@@ -42,7 +42,7 @@
     </dependencies>
 
     <build>
-        <finalName>web</finalName>
+        <finalName>account-web</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
