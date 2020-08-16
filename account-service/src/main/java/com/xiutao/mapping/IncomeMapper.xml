@@ -151,7 +151,7 @@
 	  </if>
       <if test="dataScale != null and dataScale == '30days'.toString() ">
           AND (date_format(income.date, '%Y-%m') = date_format(now(), '%Y-%m')
-          or (TO_DAYS(NOW()) - TO_DAYS(income.date) &lt;30)
+          or (TO_DAYS(NOW()) - TO_DAYS(income.date) &lt;100)
           )
       </if>
 	ORDER BY
